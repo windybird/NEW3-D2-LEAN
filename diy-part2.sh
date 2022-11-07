@@ -30,4 +30,3 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxmi
 #4. defaut themes
 sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/Bootstrap Theme (default)/Bootstrap Theme/g' feeds/luci/themes/luci-theme-bootstrap/Makefile
