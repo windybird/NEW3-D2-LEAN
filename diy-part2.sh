@@ -26,6 +26,7 @@ rm -rf feeds/luci/themes/luci-theme-argon-mod
 rm -rf feeds/luci/themes/luci-theme-netgear
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git  package/lean/luci-app-vssr
 
 #4. defaut themes
 sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
