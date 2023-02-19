@@ -17,7 +17,7 @@ sed -i 's/192.168.$((addr_offset++)).1/10.10.$((addr_offset++)).13/g' package/ba
 # 2. change the login password
 sed -i '/root::0:0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
 sed -i '/root:::0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
-sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
+sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 3. Import external feeds - JerryKuKu Argon
 rm -rf feeds/luci/themes/luci-theme-bootstrap-mod
