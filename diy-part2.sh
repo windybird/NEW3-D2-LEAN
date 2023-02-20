@@ -37,3 +37,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 
 #. add luci-app-oaf
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
+#. ttyd更改ip后不能访问
+sed -i '/exit 0/i sed -i '"'"'/${interface:+-i $interface}/s/^/#/'"'"' /etc/init.d/ttyd' package/lean/default-settings/files/zzz-default-settings
