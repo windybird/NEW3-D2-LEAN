@@ -43,4 +43,3 @@ sed -i '/exit 0/i sed -i '"'"'/${interface:+-i $interface}/s/^/#/'"'"' /etc/init
 
 # 8. 修正wifi不能启动问题
 sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit' package/lean/default-settings/files/zzz-default-settings
-
