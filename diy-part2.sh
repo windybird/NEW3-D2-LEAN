@@ -43,3 +43,7 @@ sed -i '/exit 0/i sed -i '"'"'/${interface:+-i $interface}/s/^/#/'"'"' /etc/init
 
 # 8. 修正wifi不能启动问题
 sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
+
+# 9. frp
+sed -i '11c PKG_VERSION:=0.45.0' feeds/packages/net/frp/Makefile
+sed -i '16c PKG_HASH:=829cf9f14861ab1b074de6995282f30292f53513824372cfec4084a2e8de7123' feeds/packages/net/frp/Makefile
