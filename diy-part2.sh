@@ -50,4 +50,6 @@ sed -i '/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $$(1)\/usr\/bin\/$(1) || tr
 
 # 10.port_mirror_patch
 git clone https://github.com/maxlicheng/newifid2_port_mirror_patch.git
+cd newifid2_port_mirror_patch
 patch -p1 < port_mirror.patch
+cd ..
