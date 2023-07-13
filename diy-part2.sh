@@ -47,3 +47,7 @@ sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set net
 # 9. frp
 sed -i 's/PKG_BUILD_DEPENDS:=golang\/host upx\/host/PKG_BUILD_DEPENDS:=golang\/host/g' feeds/packages/net/frp/Makefile
 sed -i '/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $$(1)\/usr\/bin\/$(1) || true/s/^/#/' feeds/packages/net/frp/Makefile
+
+# 10.msd_lite
+rm -rf feeds/packages/net/msd_lite
+git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
