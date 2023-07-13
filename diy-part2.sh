@@ -51,3 +51,4 @@ sed -i '/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $$(1)\/usr\/bin\/$(1) || tr
 # 10.msd_lite
 rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
+git clone https://github.com/ximiTech/luci-app-msd_lite.git package/lean/luci-app-msd_lite
