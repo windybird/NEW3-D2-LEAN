@@ -51,4 +51,4 @@ git clone https://github.com/ximiTech/luci-app-msd_lite.git package/lean/luci-ap
 sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
 
 #添加luci-app-omcproxy 
-git clone https://github.com/riverscn/luci-app-omcproxy.git package/luci-app-omcproxy
+git clone https://github.com/riverscn/luci-app-omcproxy.git package/lean/luci-app-omcproxy
