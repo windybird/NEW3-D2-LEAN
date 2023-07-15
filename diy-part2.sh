@@ -20,11 +20,7 @@ sed -i '/root:::0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-def
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 3. Import external feeds - JerryKuKu Argon
-rm -rf feeds/luci/themes/luci-theme-bootstrap-mod
-rm -rf feeds/luci/themes/luci-theme-material
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/themes/luci-theme-argon-mod
-rm -rf feeds/luci/themes/luci-theme-netgear
+rm -rf feeds/luci/themes/*
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
 # 4. add luci-app-vssr
