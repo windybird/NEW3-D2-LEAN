@@ -22,6 +22,7 @@ sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:999
 # 3. Import external feeds - JerryKuKu Argon
 rm -rf feeds/luci/themes/*
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
 
 # 4. add luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
