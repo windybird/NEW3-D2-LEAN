@@ -20,9 +20,9 @@ sed -i '/root:::0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-def
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 3. Import external feeds - JerryKuKu Argon
-rm -rf feeds/luci/themes/*
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
-git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
+#rm -rf feeds/luci/themes/*
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+#git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
 
 # 4. add luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
@@ -52,4 +52,4 @@ git clone https://github.com/ximiTech/luci-app-msd_lite.git package/lean/luci-ap
 sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
 
 #添加luci-app-omcproxy 
-git clone https://github.com/riverscn/luci-app-omcproxy.git package/lean/luci-app-omcproxy
+#git clone https://github.com/riverscn/luci-app-omcproxy.git package/lean/luci-app-omcproxy
