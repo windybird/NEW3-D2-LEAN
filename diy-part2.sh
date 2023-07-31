@@ -35,7 +35,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 7. ttyd更改ip后不能访问
-sed -i '/exit 0/i sed -i '"'"'/${interface:+-i $interface}/s/^/#/'"'"' /etc/init.d/ttyd' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/exit 0/i sed -i '"'"'/${interface:+-i $interface}/s/^/#/'"'"' /etc/init.d/ttyd' package/lean/default-settings/files/zzz-default-settings
+sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
 
 # 8. 修正wifi不能启动问题
 #sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
