@@ -22,6 +22,7 @@ sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:999
 # 3. Import external feeds - JerryKuKu Argon
 rm -rf feeds/luci/themes/*
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon/root/etc/uci-defaults/90_luci-theme-argon
 
 # 4. add luci-app-vssr
@@ -29,8 +30,8 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxmi
 git clone https://github.com/jerrykuku/luci-app-vssr.git  package/lean/luci-app-vssr
 
 # 5. defaut themes
-sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/Bootstrap/Design/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
 
 # 6. add luci-app-oaf
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
