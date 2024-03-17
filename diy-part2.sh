@@ -26,8 +26,8 @@ git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon/root/etc/uci-defaults/90_luci-theme-argon
 
 # 4. add luci-app-vssr
-git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/lean/luci-app-vssr
+#git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
+#git clone https://github.com/jerrykuku/luci-app-vssr.git  package/lean/luci-app-vssr
 
 # 5. defaut themes
 sed -i 's/Bootstrap/Design/g' feeds/luci/collections/luci/Makefile
