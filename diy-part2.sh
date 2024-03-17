@@ -20,10 +20,14 @@ sed -i '/root:::0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-def
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 3. Import external feeds - JerryKuKu Argon
-rm -rf feeds/luci/themes/*
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
-git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
-sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon/root/etc/uci-defaults/90_luci-theme-argon
+#rm -rf feeds/luci/themes/*
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+#git clone https://github.com/gngpp/luci-theme-design.git  feeds/luci/themes/luci-theme-design
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon/root/etc/uci-defaults/30_luci-theme-argon
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon-mod/root/etc/uci-defaults/90_luci-theme-argon
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-material/root/etc/uci-defaults/30_luci-theme-material
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-netgear/root/etc/uci-defaults/30_luci-theme-netgear
 
 # 4. add luci-app-vssr
 #git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
