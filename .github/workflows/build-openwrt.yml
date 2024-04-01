@@ -73,8 +73,8 @@ jobs:
         
     - name: Openclash
       run: |
-        mkdir package/others
-        mkdir package/others/openclash
+        mkdir /package/others
+        mkdir /package/others/openclash
         cd package/others/openclash
         git init
         git remote add origin https://github.com/vernesong/OpenClash.git
