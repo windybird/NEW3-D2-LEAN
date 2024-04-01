@@ -72,6 +72,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: Openclash
+      run: |
         mkdir package/others
         mkdir package/others/openclash
         cd package/others/openclash
