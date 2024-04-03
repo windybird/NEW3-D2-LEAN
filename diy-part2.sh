@@ -45,11 +45,11 @@ sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/
 sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
 
 # 8. 修正wifi不能启动问题
-sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
 
 # 9. frp
-sed -i 's/PKG_BUILD_DEPENDS:=golang\/host upx\/host/PKG_BUILD_DEPENDS:=golang\/host/g' feeds/packages/net/frp/Makefile
-sed -i '/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $$(1)\/usr\/bin\/$(1) || true/s/^/#/' feeds/packages/net/frp/Makefile
+#sed -i 's/PKG_BUILD_DEPENDS:=golang\/host upx\/host/PKG_BUILD_DEPENDS:=golang\/host/g' feeds/packages/net/frp/Makefile
+#sed -i '/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $$(1)\/usr\/bin\/$(1) || true/s/^/#/' feeds/packages/net/frp/Makefile
 
 # 10.msd_lite
 rm -rf feeds/packages/net/msd_lite
