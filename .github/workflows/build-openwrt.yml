@@ -76,9 +76,6 @@ jobs:
         cd openwrt
         mkdir package/others
         mkdir package/others/openclash
-        mkdir -p package/others/openclash/luci-app-openclash/files/etc/openclash/core
-        chmod +x files/clash
-        mv files/clash package/others/openclash/luci-app-openclash/files/etc/openclash/core
         cd package/others/openclash
         git init
         git remote add origin https://github.com/vernesong/OpenClash.git
