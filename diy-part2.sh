@@ -56,3 +56,8 @@ rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/lean/luci-app-msd_lite
 sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
+
+# 11.加入clash内核
+chmod +x files/clash
+mkdir -p package/others/openclash/luci-app-openclash/files/etc/openclash/core
+mv files/clash package/others/openclash/luci-app-openclash/files/etc/openclash/core
