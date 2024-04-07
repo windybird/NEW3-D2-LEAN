@@ -52,6 +52,6 @@ git branch --set-upstream-to=origin/master master
 mv luci-app-openclash ../
 cd ../../
 rm -rf package/openclash
-# mkdir -p package/luci-app-openclash/files/etc/openclash/core
-# mv files/clash package/luci-app-openclash/files/etc/openclash/core/
-# chmod 775 package/luci-app-openclash/files/etc/openclash/core/clash
+mkdir -p package/luci-app-openclash/files/etc/openclash/core
+mv files/clash package/luci-app-openclash/files/etc/openclash/core/
+chmod 775 package/luci-app-openclash/files/etc/openclash/core/clash
