@@ -10,9 +10,9 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
+# 修改IP和主机名
 sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
-#sed -i 's/192.168.$((addr_offset++)).1/10.10.$((addr_offset++)).13/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/ZJS/g' package/base-files/files/bin/config_generate
 
 # change the login password
 sed -i '/root::0:0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
