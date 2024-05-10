@@ -29,7 +29,7 @@ sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-netgear/roo
 sed -i 's/Bootstrap/Design/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
 
-# ttyd更改ip后不能访问
+# 更改IP后TTYD不能访问以及外网访问
 sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
 sed '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 
