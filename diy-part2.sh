@@ -31,7 +31,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/
 
 # 更改IP后TTYD不能访问以及外网访问
 sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
-sed '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
+sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
+sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
 # 修正wifi不能启动问题
 sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
