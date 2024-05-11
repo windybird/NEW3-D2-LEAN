@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generat
 sed -i 's/255.255.255.0/255.255.0.0/g' package/base-files/files/bin/config_generate
 sed -i 's/OpenWrt/ZJS/g' package/base-files/files/bin/config_generate
 
-# change the login password
+# 修改登录密码ezxykj
 sed -i '/root::0:0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
 sed -i '/root:::0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
