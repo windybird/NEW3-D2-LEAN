@@ -30,7 +30,7 @@ sed -i 's/Bootstrap/Design/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
 
 # 更改IP后TTYD不能访问以及外网访问
-sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
+#sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
 sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
