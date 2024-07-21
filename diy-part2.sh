@@ -11,9 +11,9 @@
 #
 
 # 修改IP(C类地址)和主机名
-sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_generate
 sed -i 's/255.255.255.0/255.255.0.0/g' package/base-files/files/bin/config_generate
-sed -i 's/OpenWrt/ZJS/g' package/base-files/files/bin/config_generate
+#sed -i 's/OpenWrt/ZJS/g' package/base-files/files/bin/config_generate
 
 # 修改登录密码ezxykj
 sed -i '/root::0:0:99999:7:::/s/^/#/' package/lean/default-settings/files/zzz-default-settings
