@@ -35,7 +35,7 @@ sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
 # 修正wifi不能启动问题
-sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
+# sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
 
 # 添加msd_lite
 rm -rf feeds/packages/net/msd_lite
